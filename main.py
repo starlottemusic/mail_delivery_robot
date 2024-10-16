@@ -18,6 +18,4 @@ ev3 = EV3Brick()
 
 # Write your program here.
 ev3.speaker.beep()
-# comment test
-# comment test
-# Comment test 3
+# Hey this is Charlotte I'm writing this on my end
