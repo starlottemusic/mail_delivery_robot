@@ -12,10 +12,21 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 # Click "Open user guide" on the EV3 extension tab for more information.
 
 
-# Create your objects here.
+# Initialization
 ev3 = EV3Brick()
+left_motor = Motor(Port.A)
+right_motor = Motor(Port.D)
+robot = DriveBase(left_motor, right_motor, wheel_diameter=88.6, axle_track=153)
 
-
-# Write your program here.
+# Movement Program
+robot.straight(1000)
 ev3.speaker.beep()
-# Hey this is Charlotte I'm writing this on my end
+
+robot.straight(-1000)
+ev3.speaker.beep()
+
+# robot.turn(360)
+ev3.speaker.beep()
+
+# robot.turn(-360)
+ev3.speaker.beep()
