@@ -6,12 +6,34 @@ from pybricks.parameters import Port, Stop, Direction, Button, Color
 from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
-from init import ev3, sub_ev3, left_motor, right_motor, mail_motor, driver, drivespeed, section, left_ultrasonic, right_ultrasonic, line_color_sensor
-import line_follower
-import hallway_1_2
+
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
 
-while True:
-    hallway_1_2.tick()
+
+# Initialization
+ev3 = EV3Brick()
+left_motor = Motor(Port.A)
+right_motor = Motor(Port.D)
+mail_motor = Motor(Port.C)
+driver = DriveBase(left_motor, right_motor, wheel_diameter=85.6, axle_track=163)
+drivespeed = 40
+
+# Movement Program
+driver.straight(500)
+ev3.speaker.beep()
+
+driver.straight(-500)
+ev3.speaker.beep()
+
+driver.turn(360)
+
+ev3.speaker.beep()
+
+driver.turn(-360)
+ev3.speaker.beep()
+
+# Mail Program
+driver.curve
+mail_motor.run_angle(360, 360, Stop.HOLD, True)
