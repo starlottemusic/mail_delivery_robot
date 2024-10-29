@@ -7,10 +7,8 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
-
-# This program requires LEGO EV3 MicroPython v2.0 or higher.
-# Click "Open user guide" on the EV3 extension tab for more information.
-
+# THIS CLASS SHOULD NEVER BE CALLED ITS JUST A TEST
+# GET OUT OF MY SWAMP
 
 # Initialization
 ev3 = EV3Brick()
