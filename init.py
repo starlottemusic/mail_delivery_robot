@@ -17,8 +17,11 @@ mail_motor = Motor(Port.C)
 driver = DriveBase(left_motor, right_motor, wheel_diameter=85.6, axle_track=163)
 drivespeed = 40
 section = 0
+mail_delivered = 1
 
-left_ultrasonic = UltrasonicSensor(Port.S1)
+gyro_sensor = GyroSensor(Port.S1)
 right_ultrasonic = UltrasonicSensor(Port.S2)
 line_color_sensor = ColorSensor(Port.S3)
 mail_color_sensor = ColorSensor(Port.S4)
+
+ev3.speaker.set_volume(100)
